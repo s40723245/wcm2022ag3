@@ -11,8 +11,7 @@
 <li>在頁面中編寫 Brython 程式</li>
 </ol>
 <h2>Tetris</h2>
-<script src="/static/brython.js">
-</script>
+<script src="/static/brython.js"></script>
 <script src="/static/brython_stdlib.js"></script>
 <!-- for ggame -->
 <p>
@@ -63,7 +62,7 @@ function doSave(storage_id, filename){
 }
 </script>
 </p>
-<p><button id="cfrr">5 個紅點方塊</button><button id="tetris">Tetris</button></p>
+<p><button id="tetris">Tetris</button></p>
 <p><!-- ######################  editor1 開始 ###################### --></p>
 <p><!-- 用來顯示程式碼的 editor 區域 --></p>
 <div id="kw_editor1" style="width: 600px; height: 300px;"></div>
@@ -123,7 +122,7 @@ doc['clear_bd1'].bind('click', clear_bd1)
 run1()
 </script>
 <!-- 以上為內建程式, 頁面可透過 ?src=gist_url 執行 -->
-<p><!-- add 1 to 100 開始 -->
+<p><!-- 從Tetris 開始 -->
 <script type="text/python3">
 from browser import document as doc
 import ace
@@ -147,12 +146,7 @@ class button2:
         Ace2.editor.gotoLine(0)
         Ace2.run()
 
-################################## chasing 5 red rect start
-# execute only one time
-cfrr_url = "https://gist.githubusercontent.com/s40723245/9a2abb77c3e7b064d400399b5852503f/raw/696cf8d02b53e6bc8816d18572777f88c3f23f4d/chasing_5_red_rect.py"
-cfrr = button2(cfrr_url)
-doc["cfrr"].bind("click", cfrr.do)
-################################## chasing 5 red rect end
+
 ################################## tetris start
 tetris_url = "https://gist.githubusercontent.com/s40723245/9a2abb77c3e7b064d400399b5852503f/raw/6422f7794dc4bf822c0b4d13f0d09635b94b95a9/pygame_to_brython_tetris.py"
 tetris = button2(tetris_url)
@@ -160,7 +154,6 @@ doc["tetris"].bind("click", tetris.do)
 ################################## tetris end
 </script>
 </p>
-<!-- <script src="/static/chimper/js/jquery-3.3.1.min.js"></script> -->
 <script src="/static/chimper/js/jquery-migrate-3.0.1.min.js"></script>
 <script src="/static/chimper/js/jquery-ui.js"></script>
 <script src="/static/chimper/js/popper.min.js"></script>
@@ -171,27 +164,5 @@ doc["tetris"].bind("click", tetris.do)
 <script src="/static/chimper/js/jquery.magnific-popup.min.js"></script>
 <script src="/static/chimper/js/bootstrap-datepicker.min.js"></script>
 <script src="/static/chimper/js/aos.js"></script>
-<!--
-            <script src="/static/chimper/js/typed.js"></script>
-                    <script>
-                    var typed = new Typed('.typed-words', {
-                    strings: ["Web Apps"," WordPress"," Mobile Apps"],
-                    typeSpeed: 80,
-                    backSpeed: 80,
-                    backDelay: 4000,
-                    startDelay: 1000,
-                    loop: true,
-                    showCursor: true
-                    });
-                    </script>
-            -->
 <script src="/static/chimper/js/main.js"></script>
-<!-- 啟用 LaTeX equations 編輯 -->
-<p></p>
-<!-- <script>
-  MathJax = {
-    tex: {inlineMath: [['$', '$'], ['\(', '\)']]}
-  };
-  </script>
-  <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>-->
 <p></p>
